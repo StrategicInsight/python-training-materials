@@ -8,11 +8,6 @@
 
 ## Installing pyenv (Ubuntu / WSL)
 - install pyenv: `curl https://pyenv.run | bash`
-- Add the following lines to your shell configuration file (e.g. `~/.bashrc` for bash or `~/.zshrc` for zsh) and save them:
-	- `export PATH="$HOME/.pyenv/bin:$PATH"`
-	- `eval "$(pyenv init -)"` 
-	- `eval "$(pyenv virtualenv-init -)"`
-- restart your shell: `exec $SHELL`
 
 ## Installing pyenv (MacOS)
 - We'll first install Homebrew. Homebrew is a package manager for MacOS. Copy this command into your terminal to install:
@@ -20,6 +15,13 @@
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   ```
 - To install pyenv: `brew install pyenv pyenv-virtualenv`
+
+## Update your shell (All Environments):
+- Add these settings to your shell configuration file  (e.g. `~/.bashrc` for bash or `~/.zshrc` for zsh) and save them:
+	- `export PATH="$HOME/.pyenv/bin:$PATH"`
+	- `eval "$(pyenv init -)"` 
+	- `eval "$(pyenv virtualenv-init -)"`
+- restart your shell: `exec $SHELL`
 
 # Build Dependencies
 - These are libraries that we will require to build our Python installations
