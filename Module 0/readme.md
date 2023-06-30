@@ -25,11 +25,10 @@
 - These are libraries that we will require to build our Python installations
 
 ## Install Build dependencies (Ubuntu / WSL)
-- These are the packages that will be required 
 - `sudo apt-get update; sudo apt-get install --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev`
 
 ## Install Build dependencies (MacOS):
-- brew install openssl readline sqlite3 xz zlib tcl-tk
+- `brew install openssl readline sqlite3 xz zlib tcl-tk`
 
 # Managing Python Versions and Virtualenvs with Pyenv
 - Use pyenv to install the preferred version of python (this could be 3.11, or whatever your specific project requires.)
