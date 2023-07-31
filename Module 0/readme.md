@@ -1,9 +1,9 @@
-# Installing WSL on Windows
+# 1. Installing WSL on Windows
 - [Installing WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 	- Run Windows Powershell as an administrator 
 	- run `wsl --install -d Ubuntu`
 		- (if you have to start over, you can remove this installation with `wsl --unregister Ubuntu`)
-# PyEnv
+# 2. PyEnv
 - Python projects usually specify which version of Python and other packages they require. To prevent version conflicts between different projects, it's useful to have virtual environments which give each project its own python installation. We can manage virtual environments with pyenv.
 
 ## Installing pyenv (Ubuntu / WSL)
@@ -16,14 +16,14 @@
   ```
 - To install pyenv: `brew install pyenv pyenv-virtualenv`
 
-## Update your shell (All Environments):
+## Update your shell (Ubuntu / WSL / MacOS):
 - Add these settings to your shell configuration file  (e.g. `~/.bashrc` for bash or `~/.zshrc` for zsh) and save them:
 	- `export PATH="$HOME/.pyenv/bin:$PATH"`
 	- `eval "$(pyenv init -)"` 
 	- `eval "$(pyenv virtualenv-init -)"`
 - restart your shell: `exec $SHELL`
 
-# Build Dependencies
+# 3. Build Dependencies
 - These are libraries that we will require to build our Python installations
 
 ## Install Build dependencies (Ubuntu / WSL)
@@ -32,18 +32,41 @@
 ## Install Build dependencies (MacOS):
 - `brew install openssl readline sqlite3 xz zlib tcl-tk`
 
-# Managing Python Versions and Virtualenvs with Pyenv
+# 4. Managing Python Versions and Virtualenvs with Pyenv
 - Use pyenv to install the preferred version of python (this could be 3.11, or whatever your specific project requires.)
 	- `pyenv install 3.11`
-- Make a new virtual environment called 'learn-python' which uses 3.11 as its base. Activate the virtual environment.
-	- `pyenv virtualenv 3.11 learn-python`
-	- `pyenv activate learn-python`
+- Make a new virtual environment called 'learn-python-env' which uses 3.11 as its base. Activate the virtual environment.
+	- `pyenv virtualenv 3.11 learn-python-env`
+	- `pyenv activate learn-python-env`
 - You can specify the local python version for any directory which will automatically activate the virtual environment. This is an efficient way to switch between projects which use different virtualenvs.
-	- `pyenv local learn-python`
+	- create a new directory for this class anywhere you'd like. To do so in your home directory:
+  		- `mkdir ~/learn-python`
+    		- `cd ~/learn-python`
+  	- `pyenv local learn-python-env`
 
-# Installing Jupyter Notebook
-- pip install jupyter
+# 5. Managing packages with Poetry
+
+## Installing Poetry (Ubuntu / WSL / MacOS)
+- `curl -sSL https://install.python-poetry.org | python3 -`
+
+## Update your shell (Ubuntu / WSL / MacOS)
+- Add these settings to your shell configuration file  (e.g. `~/.bashrc` for bash or `~/.zshrc` for zsh) and save them:
+	- `export PATH="$HOME/.local/bin:$PATH"`
+- restart your shell: `exec $SHELL`
+
+## Set up your poetry environment
+- `cd ~/learn-python`
+- `poetry init` (n for author, no to both interactive dependencies questions, defaults for everything else)
+
+# 6. Jupyter Notebook
+
+## Installing Jupyter
+- `cd ~/learn-python` (or whatever you named your directory from step 4)
+- `poetry add jupyter`
+
+## Running Jupyter Notebook
 - Windows WSL:
-	- run `jupyter notebook --no-browser` and connect to the URL provided with your regular web browser 
+	- run `jupyter notebook --no-browser` and connect to the URL provided with your regular web browser
+ 	- (the default is http://localhost:8888)
 - Other Platforms:
 	- run `jupyter notebook`
