@@ -7,6 +7,8 @@ This document will help you install python, pyenv (for virtual environment manag
 	- Run Windows Powershell as an administrator 
 	- run `wsl --install -d Ubuntu`
 		- (if you have to start over, you can remove this installation with `wsl --unregister Ubuntu`)
+- After this installation, everything else you do will be in the WSL / Ubuntu environment.
+  
 # 2. PyEnv
 - Python projects usually specify which version of Python and other packages they require. To prevent version conflicts between different projects, it's useful to have virtual environments which give each project its own python installation. We can manage virtual environments with pyenv.
 
