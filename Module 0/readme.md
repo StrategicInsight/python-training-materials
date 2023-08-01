@@ -1,3 +1,7 @@
+# Getting your Python environment set up
+
+This document will help you install python, pyenv (for virtual environment management), and poetry (for package management). If you're using Windows, we encourage you to install the Windows Subsystem for Linux (WSL) in step 1. If you're using Linux or MacOS, you can skip the first step. 
+
 # 1. Installing WSL on Windows
 - [Installing WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 	- Run Windows Powershell as an administrator 
