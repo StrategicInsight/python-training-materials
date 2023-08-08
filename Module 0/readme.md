@@ -70,10 +70,13 @@ This document will help you install python, pyenv (for virtual environment manag
 - `cd ~/learn-python` (or whatever you named your directory from step 4)
 - `poetry add jupyter`
 
-## Running Jupyter Notebook
+## Running Jupyter Notebook / Jupyter lab
 - Open a shell with the environment configuration by running `poetry shell`
 - Windows WSL:
-	- run `jupyter notebook --no-browser` and connect to the URL provided with your regular web browser
+	- run `jupyter notebook --no-browser` or `jupyter lab` and connect to the URL provided with your regular web browser
  	- (the default is http://localhost:8888)
 - Other Platforms:
-	- run `jupyter notebook`
+	- run `jupyter notebook` or `jupyter lab`
+ 
+## What's the difference between Jupyter Notebook and Jupyter Lab?
+- Jupyter Lab is a slightly more robust UI that, among other things, allows you to view multiple notebooks in the same browser tab. Without it, you'll have a separate tab for each notebook you open.
