@@ -71,6 +71,7 @@ This document will help you install python, pyenv (for virtual environment manag
 - `poetry add jupyter`
 
 ## Running Jupyter Notebook
+- Open a shell with the environment configuration by running `poetry shell`
 - Windows WSL:
 	- run `jupyter notebook --no-browser` and connect to the URL provided with your regular web browser
  	- (the default is http://localhost:8888)
