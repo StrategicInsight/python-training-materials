@@ -2,6 +2,8 @@
 
 This document will help you install python, pyenv (for virtual environment management), and poetry (for package management). If you're using Windows, we encourage you to install the Windows Subsystem for Linux (WSL) in step 1. If you're using Linux or MacOS, you can skip the first step. 
 
+NOTE: This guide explains the use of pyenv and poetry. The python community has been standardizing on the use of a library called [uv](https://github.com/astral-sh/uv) for dependency management, and this guide has not yet been updated.
+
 # 1. Installing WSL on Windows
 - [Installing WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 	- Run Windows Powershell as an administrator 
